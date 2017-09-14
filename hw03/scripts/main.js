@@ -23,10 +23,15 @@ const changeLinkAndImageAttributes = () => {
 
 const changeClassAttribute = () => {
   console.log('changing class attribute')
-  // YOUR CODE BELOW THIS LINE
+  document.querySelector('.tweet').className = 'tweet-pink'
+  document.querySelector('#tweet1').className = 'tweet-pink'
+  document.querySelector('#tweet2').className = 'tweet-pink'
 }
 
 const appendElements = () => {
-  console.log('appending element')
-  // YOUR CODE BELOW THIS LINE
+console.log('appending element')
+
+document.querySelector('#tweet1').innerHTML += '<a href= https://f17.ebook.mmart.us> Intro to JavaScript</a>'
+document.querySelector('#tweet1').innerHTML += '<img src= https://wpcdn.healthyplace.com/blogs/wp-content/uploads/2014/08/Overwhelmed-by-Stress-and-Anxiety-How-to-Deal-with-It.jpg></a>'
+
 }
