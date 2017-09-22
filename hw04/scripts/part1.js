@@ -9,7 +9,7 @@ const setLanguage = (code) => {
         language = 'Russian'
     } else if (code === 'es') {
         language = 'Spanish'
-    } else {
+    } else { code === 'en'
         language = 'English'
     }
     document.getElementById('language').innerHTML = language
