@@ -1,4 +1,6 @@
 //Megan Nelson
+//the setLanguage function sets the language for the page. 
+
 let language
 let languageCode
 
@@ -9,8 +11,8 @@ const setLanguage = (code) => {
         language = 'Arabic'
     } else if ( === 'km') {
         language = 'Khmer'
-    } else { navigator.language === 'th'
-        language = 'Thai'
+    } else { navigator.language === 'en'
+        language = 'English'
     }
     document.getElementById('language').innerHTML = language
 }

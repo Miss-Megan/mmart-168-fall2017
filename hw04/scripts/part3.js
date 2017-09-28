@@ -1,19 +1,19 @@
 
 //Megan Nelson//
-let language = 'English'
-let languageCode = 'en'
+let language = 'Khmer'
+let languageCode = 'kh'
 let jsonData
 
 
 const setLanguage = (code) => {
     //Note: language codes here: https://www.w3schools.com/tags/ref_language_codes.asp
     languageCode = code
-    if (code === 'ru') {
-        language = 'Russian'
-    } else if (code === 'es') {
-        language = 'Spanish'
-    } else {
-        language = 'English'
+    if (code === 'ar') {
+        language = 'Arabic'
+    } else if (code === 'kh') {
+        language = 'Khmer'
+    } else (code === 'th') {
+        language = 'Thai'
     }
     document.getElementById('language').innerHTML = language
 
@@ -49,7 +49,7 @@ const getData = () => {
             // clear out existing tweets:
             clearData()
 
-            // output the text of the first tweet:
+      /*      // output the text of the first tweet:
             status = json.statuses[0]
             div = document.createElement("div")
             div.className = "tweet"
@@ -67,23 +67,42 @@ const getData = () => {
 
             // 1. Describe what you think this code is doing.
 
+//The code is gathering live data - the most recent tweet using the search term.
+
+
             // 2. output the text of the third tweet:
-
+            status = json.statuses[2]
+            div = document.createElement("div")
+            div.className = "tweet"
+            textNode = document.createTextNode(status.text)
+            div.appendChild(textNode)
+            document.getElementById("results").appendChild(div)
             // 3. output the text of the fourth tweet:
-
+            status = json.statuses[3]
+            div = document.createElement("div")
+            div.className = "tweet"
+            textNode = document.createTextNode(status.text)
+            div.appendChild(textNode)
+            document.getElementById("results").appendChild(div)
             // 4. output the text of the fifth tweet:
+            status = json.statuses[4]
+            div = document.createElement("div")
+            div.className = "tweet"
+            textNode = document.createTextNode(status.text)
+            div.appendChild(textNode)
+            document.getElementById("results").appendChild(div)
 
             // 5. comment the code above, starting from after the clearData,
             //    and ending right before this comment. Then, un-comment the
-            //    code below:
+            //    code below: */
 
-            /*json.statuses.forEach(function (status) {
+            json.statuses.forEach(function (status) {
                 div = document.createElement("div")
                 div.className = "tweet"
                 textNode = document.createTextNode(status.text)
                 div.appendChild(textNode)
                 document.getElementById("results").appendChild(div)
-            })*/
+            })
 
         })
 };
