@@ -1,17 +1,23 @@
-let language = 'English'
-let languageCode = 'en'
+//Megan Nelson//
+//The getData funtion retrieves live data from Twitter using the chosen search term.
+//Question 2: reference jsonData.status [0]
+//Question 3: jsonData.status.innerHTML [4]
+//Question 4: jsonData.status [1] user{name}
+
+let language = 'Khmer'
+let languageCode = 'kh'
 let jsonData
 
 
 const setLanguage = (code) => {
     //Note: language codes here: https://www.w3schools.com/tags/ref_language_codes.asp
     languageCode = code
-    if (code === 'ru') {
-        language = 'Russian'
-    } else if (code === 'es') {
-        language = 'Spanish'
-    } else {
-        language = 'English'
+    if (code === 'ar') {
+        language = 'Arabic'
+    } else if (code === 'km') {
+        language = 'Khmer'
+    } else {code === 'th'
+        language = 'Thai'
     }
     document.getElementById('language').innerHTML = language
 
