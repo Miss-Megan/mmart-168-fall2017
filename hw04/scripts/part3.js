@@ -12,7 +12,7 @@ const setLanguage = (code) => {
         language = 'Arabic'
     } else if (code === 'kh') {
         language = 'Khmer'
-    } else (code === 'th') {
+    } else {
         language = 'Thai'
     }
     document.getElementById('language').innerHTML = language
