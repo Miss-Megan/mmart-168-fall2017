@@ -1,22 +1,31 @@
-# HOMEWORK 5: MANIPULATING TWITTER DATA WITH FUNCTIONS
-> * Due date: Midnight on Wednesday, 10/4 (1 week)
-> * Part I: Using Github like the cool kids we are
-> * Part II: Homework
-> * To submit: See Part II, Step 4
 
-## Preamble
-This homework will require some googling. As a software engineer, a lot of what you'll need to do is express what you're TRYING to do, and then read code and documentation in order to achieve it. Remember: StackOverflow and Mozilla Developer Network (MDN) are your friend!
 
-## Part I: Setting Up Your GitHub
-1. Using the Terminal, navigate to your git repository: `$ cd /path/to/mmart-168-fall2017`
-2. Check out the master branch: `$ git checkout master`
-3. Pull the most recent changes from the upstream repository: `$ git pull --rebase upstream master`
-4. Create a new branch to do Homework 5: `$ git branch homework05`
-5. Checkout your new branch: `$ git checkout homework05`
-6. Verify that you are now on the new branch: `$ git branch` (check that your new branch has an asterik next to it).
 
 ## PART II: Reading response
-Edit README.MD and write your reading response here!
+
+
+'Ten Things A Serious JavaScript Developer Should Learn'
+from benmccormick.org
+
+Love that Reddit is mentioned, b/c I have found Reddit as the most raw responses of and often insightful) anything on the web. This article assumed "the audience is a developer who has some level of professional experience." Unlike the podcasts I've listened to, , I did not feel encouraged after reading this article. There were tasks/languages and concepts I am familiar with, however the article mentioned way more things I am not familiar with... such as:
+
+Prettier
+Typescript
+React
+React Native
+Cordova
+Electron
+Basics of networking... and many others.
+
+It was nice to read "JavaScript is not a complicated language" opposed to Python, for example. But it feels very complicated at this point in time.
+
+
+
+
+
+
+
+
 
 ## Part III: JavaScript Homework
 

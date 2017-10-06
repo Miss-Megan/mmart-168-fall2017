@@ -19,6 +19,61 @@ const setLanguage = (code) => {
     getData()
 }
 
+//Homework & online lab//
+
+//copy/pasted from FreeCodeCamp
+//easiest way:
+//can call "str" anything you want. Doesn't need to be str
+const reverseText = (str) => {
+  return str.split('').reverse().join('')
+}
+
+//To change using a fat arrow, remove "function"  write const reverseText = (str) =>
+//old fashioned way "function reverseText(str)"
+const reverseText_attempt2 = (str) => {
+    // Step 1. Use the split() method to return a new array
+    var splitString = str.split('') // var splitString = "hello".split("");
+    // ["h", "e", "l", "l", "o"]
+
+    // Step 2. Use the reverse() method to reverse the new created array
+    var reverseArray = splitString.reverse() // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+    // ["o", "l", "l", "e", "h"]
+
+    // Step 3. Use the join() method to join all elements of the array into a string
+    var joinArray = reverseArray.join('') // var joinArray = ["o", "l", "l", "e", "h"].join("");
+    // "olleh"
+
+    //Step 4. Return the reversed string
+    return joinArray // "olleh"
+}
+
+// => means return
+const reverseText_attempt1 = (theText) => {
+
+//1. Split the string (theText) into an array of characters
+//2. reverse order of the array
+//3. convert sorted array back into a string of characters
+let reversedText = ''
+for(let i = theText.length -1; i >=0; i--) {
+  reversedText += theText[i]
+}
+ return reversedText
+}
+
+const reverseTweet = (tweetText) => {
+  //if it has a hashtag return normal tweet
+  //if no hashtag text reversed
+if (tweetText.indexOf('#') === -1) {
+  //This reverses it if no hashtag
+  return reverseText(tweetText)
+} else {
+  return tweetText
+  }
+}
+
+
+//end online lab//
+
 const clearData = () => {
     const element = document.getElementById('results')
     while (element.firstChild) {
@@ -67,7 +122,10 @@ const getData = () => {
             json.statuses.forEach((status) => {
                 div = document.createElement('div')
                 div.className = 'tweet'
-                textNode = document.createTextNode(status.text)
+                //for each tweet returned on the server theres a 'div' tag. The class name given is 'tweet'
+                textNode = document.createTextNode(reverseText(status.text))
+                //then creating text.  Putting the tweet inside the text
+                //without reverseText wrapped around the status.text, nothing would work
                 div.appendChild(textNode)
                 document.getElementById('results').appendChild(div)
             })
