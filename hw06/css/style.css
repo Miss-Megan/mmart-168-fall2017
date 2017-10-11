@@ -53,6 +53,11 @@ pre {
   display: block;
   width: 1.5em;
   fill: #7f8c8d;
+  cursor: pointer;
+}
+
+.yellow-tweet {
+  background: #f1c40f;
 }
 
 .active {
@@ -64,8 +69,37 @@ pre {
   justify-content: flex-end;
 }
 
+.tweet-highlight {
+  background: rgba(57, 165, 178, 0.2);
+  border: rgb(57, 165, 178);
+}
 
+.tweet-highlight i {
+  color: red;
 
+  -webkit-animation: grow 2s ease infinite;
+  -moz-animation: grow 2s ease infinite;
+  -o-animation: grow 2s ease infinite;
+  animation: grow 2s ease infinite;
+}
+
+  @-webkit-keyframes grow {
+    0% { transform: scale(2);}
+    50% { transform: scale(3);}
+    100% { transform: scale(2);}
+  }
+
+    @-moz-keyframes grow {
+    0% { transform: scale(2);}
+    50% { transform: scale(3);}
+    100% { transform: scale(2);}
+  }
+
+  @-o-keyframes grow {
+  0% { transform: scale(2);}
+  50% { transform: scale(3);}
+  100% { transform: scale(2);}
+}
 /*************************/
 /* JSON Syntax Highlight */
 /*************************/

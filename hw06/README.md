@@ -16,7 +16,21 @@ This homework will require some googling. As a software engineer, a lot of what 
 6. Verify that you are now on the new branch: `$ git branch` (check that your new branch has an asterisk next to it).
 
 ## PART II: Reading response
-Edit README.MD and write your reading response here!
+What is the Future of Front-End Web Development
+When Does a Project Need React?
+by
+Chris Coyier
+
+I like Chris’s writing style.  It was nice to hear him mention some of the resources we use in class, for example, Codepen. Off the bat he said developers are being expected to do more and more aka “work very well and very fast", which was nerve-wracking to read.
+
+I enjoyed reading another post he wrote (link in the original article), “When Does a Project Need React?” React is a word that seems to keep popping up, and I have been meaning to look it up... so it was a nice surprise.
+
+Also, now I know what Spaghetti code is- I think all my code qualifies as spaghetti code. Buuut Spaghetti code sounds sophisticated - insider lingo. It is much better than simply saying "bad code". I’m excited to throw that word around.
+
+…And Chris even offered a solution! Redux! I don’t know what Redux is, but it sounds incredibly helpful…I was sold way before he said it makes it “harder to break things” Chris also writes that using React, it is possible to remove CSS, and put the html is in JavaScript.  I don’t have the foggiest clue how that works, but wow! Despite Chris's proclamation (somewhat in jest) “All JavaScript! All Hail JavaScript!” quote he also says, “Being good at HTML and CSS remains vital”
+
+My takeaway: JavaScript is a no-brainer.
+
 
 ## Part III: JavaScript Homework
 
