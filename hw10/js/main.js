@@ -1,6 +1,8 @@
 const apiKey = 'MW9S-E7SL-26DU-VV8V'
 
 const makeStationList = () => {
+  //url that asks the question you want to ask. In this case, give me a list of
+  //Bart stations
     const url = 'https://api.bart.gov/api/stn.aspx?key=' + apiKey +
                     '&cmd=stns&json=y'
     fetch(url)
@@ -8,36 +10,91 @@ const makeStationList = () => {
             return response.json()
         })
         .then((json) => {
+          //here is where you do something cool with code
             json = json.root
             console.log(json)
+            //console.log(json)
+            console.log(json.stations.station)
+            json.stations.station.forEach((station) => {
+//1. Create the element you want to add to the DOM
+          const option = document.createElement("option")
+//2. Assign data to some part of the element
+          option.innerHTML = station.name
+          option.value = station.abbr
+//3. Append the newly created element to the DOM (just somewhere)
+          document.getElementById('station_list').appendChild(option)
+    })
 
-            // PART III.A.: Use a loop to populate the select menu with *ALL*
+// How do i use the data returned from Bart to populate my dropdown menu?
+
+        /*    // PART III.A.: Use a loop to populate the select menu with *ALL*
             // of the stations that are returned from the BART data feed:
             const option1 = document.createElement("option")
             option1.value = 'DBRK'
             option1.innerHTML = 'Downtown Berkeley'
-            document.getElementById('station_list').appendChild(option1)
+            document.getElementById('station_list').appendChild(option1) */
         })
         .catch((err) => {
             console.log(err)
         })
 }
 
+makeStationList()
+
+
 const getArrivalTimes = () => {
+  //go out and find the element with ID station list and store it in a vaiable called station list
     const stationList = document.getElementById('station_list')
-    // PART III.B.1: The bartStationCode should read from the list and query
-    // for the corresponding station
-    const bartStationCode = 'DBRK'
-    console.log('Selected Station Code:', bartStationCode)
-    let url = 'https://api.bart.gov/api/etd.aspx?key=' + apiKey + '&cmd=etd' +
-                '&orig=' + bartStationCode + '&json=y'
-    fetch(url)
+    const bartStationCode = stationList.value
+    //print to screen:
+console.log(bartStationCode)
+console.log('Selected Station Code:', bartStationCode)
+let url = 'https://api.bart.gov/api/etd.aspx?key=MW9S-E7SL-26DU-VV8V&cmd=etd&orig=' +
+bartStationCode + '&json=y'
+
+fetch(url)
         .then((response) => {
             return response.json()
         })
         .then((json) => {
-            json = json.root
-            console.log(json)
+          json = json.root
+
+          //1. clear out existing element
+          document.getElementById('results').innerHTML = ' '
+
+          //2. Add header that shows selected station name
+          const header = document.createElement('h2')
+          header.innerHTML = json.station[0].name
+          document.getElementById('results').appendChild(header)
+
+// Log all of the train lines:
+          json.station[0].etd.forEach((line) => {
+            console.log('Line:', line)
+            const trainLine = document.createElement("p")
+            trainLine.innerHTML = line.destination + ': Platform #' + line.estimate[0].platform
+            document.getElementById('results').appendChild(trainLine)
+
+            //4. log all of the estimates for each train line:
+            line.estimate.forEach((estimate) => {
+              console.log('Estimate:', estimate)
+
+              const departureTime = document.createElement("span")
+              departureTime.innerHTML = estimate.minutes + ' (' + estimate.direction + ')'
+              departureTime.classList.add("train-square")
+              departureTime.style.backgroundColor = estimate.hexcolor
+              departureTime.style.borderWidth = '5px'
+              document.getElementById('results').appendChild(departureTime)
+            })
+          })
+        })
+}
+    /*    .catch((err) => {
+            console.log(err)
+        })
+}
+
+        /*
+
             const results = document.getElementById('results')
             results.innerHTML = ''
             json.station = json.station[0]
@@ -71,5 +128,4 @@ const getArrivalTimes = () => {
             console.log(err)
         })
 }
-
-makeStationList()
+*/

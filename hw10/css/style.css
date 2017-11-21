@@ -1,3 +1,31 @@
 body {
     background: #F0F0F0;
 }
+
+span {
+  margin: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+p {
+  font-weight: bold;
+}
+
+.train-square {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.frame {
+  width: 400px;
+  margin: 20px auto 0px auto;
+  background: #FFF;
+  padding: 10px;
+  min-height: 200px;
+}
