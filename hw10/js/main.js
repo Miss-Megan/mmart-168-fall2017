@@ -78,11 +78,18 @@ fetch(url)
             line.estimate.forEach((estimate) => {
               console.log('Estimate:', estimate)
 
+              //colored square and text are in same element. One option
+              // is to separate the two into two different elements:
+
+              //First element is just an empty span tag with some style:
+              const square = document.createElement("i")
+              square.className = "fa fa-train fa-3x"
+              square.style.color = estimate.hexcolor
+              document.getElementById('results').appendChild(square)
+
+              //Second element is the label
               const departureTime = document.createElement("span")
               departureTime.innerHTML = estimate.minutes + ' (' + estimate.direction + ')'
-              departureTime.classList.add("train-square")
-              departureTime.style.backgroundColor = estimate.hexcolor
-              departureTime.style.borderWidth = '5px'
               document.getElementById('results').appendChild(departureTime)
             })
           })
