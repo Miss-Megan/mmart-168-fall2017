@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+    color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  color: #f2f2f2;
+  text-shadow: 2px 2px 4px #e6e6e6;
+}
+
+img {
+    width: 300px;
+    margin-top: 40px;
+}
+
+input, select {
+    min-width: 200px;
+}
+
+.container, .container-fluid {
+    margin-top: 40px;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 0px;
+    padding-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.form-group {
+    margin-right: 1rem;
+}
+
+#btn a:hover {
+  opacity: .5;
+}
