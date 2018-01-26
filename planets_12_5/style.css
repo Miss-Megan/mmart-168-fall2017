@@ -1,0 +1,63 @@
+
+body {
+    background-image: url(background.gif);
+    background-position: center;
+    color: #f2f2f2;
+}
+
+h1 {
+  padding-top: 40px;
+  text-align: center;
+  color: #f2f2f2;
+  text-shadow: 2px 2px 4px #e6e6e6;
+}
+
+ h3 {
+   text-align: center;
+   padding-top: 100px;
+ }
+
+
+img {
+    width: 300px;
+    padding: 20px;
+    opacity: 100%;
+}
+
+input, select {
+    min-width: 200px;
+}
+
+.container, .container-fluid {
+    margin-top: 40px;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 0px;
+    padding-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.form-group {
+    margin-right: 1rem;
+}
+
+.btn:hover {
+  opacity: .5;
+}
+
+#planets > div {
+    /*border: solid 1px #fff;*/
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    width: 300px;
+}

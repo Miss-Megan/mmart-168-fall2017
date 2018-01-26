@@ -1,0 +1,128 @@
+
+body {
+    background-image: url(background.gif);
+    background-position: center;
+    color: #f2f2f2;
+}
+
+@font-face {
+    font-family: Starjout;
+    src: url(Starjout.ttf);
+}
+
+h1 {
+  font-family: Starjout;
+  padding-top: 40px;
+  font-size: 70px;
+  text-align: center;
+  color: #f2f2f2;
+  text-shadow: 2px 2px 4px #e6e6e6;
+  animation: fadein 4s;
+-moz-animation: fadein 4s; /* Firefox */
+-webkit-animation: fadein 4s; /* Safari and Chrome */
+-o-animation: fadein 4s; /* Opera */
+}
+
+ h4 {
+   text-align: center;
+   padding-top: 50px;
+     animation: fadein 8s;
+-moz-animation: fadein 8s; /* Firefox */
+-webkit-animation: fadein 8s; /* Safari and Chrome */
+-o-animation: fadein 8s; /* Opera */
+ }
+
+  h5 {
+   text-align: center;
+   padding-top: 5px;
+   margin-bottom: 20px;
+     animation: fadein 12s;
+    -moz-animation: fadein 12s; /* Firefox */
+    -webkit-animation: fadein 12s; /* Safari and Chrome */
+    -o-animation: fadein 12s; /* Opera */
+ }
+
+
+img {
+    width: 250px;
+    padding: 20px 0px 10px 10px;
+    opacity: 100%;
+    margin: 0 auto;
+    align: center;
+    float: left;
+}
+
+input, select {
+    min-width: 150px;
+}
+
+.container, .container-fluid {
+    margin-top: 40px;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 0px;
+    padding-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.form-group {
+    margin-right: 2rem; auto;
+    width: 20px;
+
+}
+
+#planets > div {
+    /*border: solid 1px #fff;*/
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    width: 300px;
+}
+
+#day,
+#month {
+  margin: 40px;
+}
+
+#perspective {
+  margin-top: 250px;
+  margin-left: -200px;
+  visibility: hiden;
+}
+
+/*#perspective:hover {
+  visibility: show;
+}*/
+
+
+figcaption {
+    position: relative;
+}
+.planet {
+    vertical-align: top;
+
+}
+
+.planet figcaption {
+  display: none;
+}
+.planet:hover figcaption {
+  display: block;
+  text-align: center;
+  margin-top: -25px;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
