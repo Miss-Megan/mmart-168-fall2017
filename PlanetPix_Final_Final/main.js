@@ -1,3 +1,5 @@
+
+const proxy = 'https://cors-anywhere.herokuapp.com/'
 const setStuffUp = () => {
     const today = new Date()
     const day = today.getDate()
@@ -30,7 +32,7 @@ const showPlanet = (planetName) => {
 
         toggleLoadingIcon(planetName)
         document.getElementById(planetName).style.display = 'none'
-        fetch(url).then(function(response) {
+        fetch(proxy + url).then(function(response) {
             return response.blob()
         }).then(function(theMagic) {
             toggleLoadingIcon(planetName)
@@ -57,7 +59,7 @@ const showEarth = () => {
     direction + '&date=' + month + '/' + day + '/2017&time=12:00PM'
     toggleLoadingIcon('earth')
     document.getElementById('earth').style.display = 'hide'
-    fetch(url).then(function(response) {
+    fetch(proxy + url).then(function(response) {
         return response.blob()
     }).then(function(theMagic) {
         toggleLoadingIcon('earth')
